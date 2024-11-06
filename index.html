@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/3ed2e8cef0.js" crossorigin="anonymous"></script>
+  <title>Mortgage Calculator</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="user-inputs">
+        <div class="header">
+          <h1>Mortgage Calculator</h1>
+          <p id="clearAllBtn">Clear All</p>
+        </div>
+        <div class="inputs-container">
+          <div class="inputs">
+            <p>Mortgage Amount</p>
+            <div id="amountInputContainer" class="input-container">
+              <div class="input first-one">
+                <span>£</span>
+                <input id="amountInput" type="text">
+              </div>
+              <p class="alert">This field is required</p>
+            </div>
+          </div>
+          <div class="inputs__wrapper">
+            <div class="inputs">
+              <p>Mortgage Term</p>
+              <div id="termInputContainer" class="input-container">
+                <div class="input">
+                  <input id="termInput" type="number">
+                  <span>years</span>
+                </div>
+                <p class="alert">This field is required</p>
+              </div>
+            </div>
+            <div class="inputs">
+              <p>Mortgage Term</p>
+              <div id="interestInputContainer" class="input-container">
+                <div class="input">
+                  <input id="interestInput" type="number">
+                  <span>%</span>
+                </div>
+                <p class="alert">This field is required</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-type">
+          <p>Mortgage Type</p>
+          <div class="select-type-item">
+            <input type="radio" id="repaymentRadio" name="paymentOption">
+            <p>Repayment</p>
+          </div>
+          <div class="select-type-item">
+            <input type="radio" id="interestOnlyRadio" name="paymentOption">
+            <p>Interest Only</p>
+          </div>
+          <p id="selectTypeAlert" class="alert alert-last-one"></p>
+        </div>
+        <button id="calculateBtn"><i class="fa-solid fa-calculator"></i>Calculate Repayments</button>
+      </div>
+      <div class="results">
+        <div class="empty-results-screen">
+          <img src="assets/images/calculator.svg">
+          <p>Results shown here</p>
+          <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+        </div>
+        <div class="results-screeen">
+          <p>Your results</p>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+          <div class="repayments">
+            <div class="monthly">
+              <p>Your monthly repayments</p>
+              <p id="monthlyRepaymentTxt">£1,797.74</p>
+            </div>
+            <div class="total">
+              <p>Total you'll repay over the term</p>
+              <p id="totalRepaymentTxt">£539,322.94</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
